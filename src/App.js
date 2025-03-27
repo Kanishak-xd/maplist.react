@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+export default function App() {
+  const people = [
+    "List element 1",
+    "List element 2",
+    "List element 3",
+    "List element 4",
+    "List element 5",
+  ];
+  const listItems = people.map((person) => <li>{person}</li>);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ul>{listItems}</ul>;
+    </>
   );
 }
-
-export default App;
